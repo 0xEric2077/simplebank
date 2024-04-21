@@ -1,5 +1,5 @@
 postgres:
-	docker run -itd -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=123456 -p 5432:5432 --mount source=simplebank,target=/data --name postgresql postgres
+	docker run -itd -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=123456 -p 5432:5432 --mount source=simplebank,target=/data --name postgresql --network bank-network postgres
 
 createdb:
 	docker exec -it postgresql createdb --username=postgres --owner=postgres simple_bank
