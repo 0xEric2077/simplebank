@@ -34,7 +34,7 @@ func authMiddleware(tokenMaker token.Maker) gin.HandlerFunc {
 
 		authorizationType := strings.ToLower(fields[0])
 		if authorizationType != authorizationTypeBearer {
-			err := fmt.Errorf("unsupported au；/；thorization type %s", authorizationType)
+			err := fmt.Errorf("unsupported authorization type %s", authorizationType)
 			ctx.AbortWithStatusJSON(http.StatusUnauthorized, errorResponse(err))
 			return
 		}
