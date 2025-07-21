@@ -3,11 +3,12 @@ package api
 import (
 	"database/sql"
 	"errors"
-	db "github.com/EricUCL/simplebank/db/sqlc"
-	"github.com/EricUCL/simplebank/token"
+	"net/http"
+
+	db "github.com/0xEric2077/simplebank/db/sqlc"
+	"github.com/0xEric2077/simplebank/token"
 	"github.com/gin-gonic/gin"
 	"github.com/lib/pq"
-	"net/http"
 )
 
 type createAccountRequest struct {

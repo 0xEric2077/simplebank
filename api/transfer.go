@@ -4,10 +4,11 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	db "github.com/EricUCL/simplebank/db/sqlc"
-	"github.com/EricUCL/simplebank/token"
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	db "github.com/0xEric2077/simplebank/db/sqlc"
+	"github.com/0xEric2077/simplebank/token"
+	"github.com/gin-gonic/gin"
 )
 
 type transferRequest struct {

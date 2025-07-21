@@ -2,11 +2,12 @@ package db
 
 import (
 	"database/sql"
-	"github.com/EricUCL/simplebank/util"
-	_ "github.com/lib/pq"
 	"log"
 	"os"
 	"testing"
+
+	"github.com/0xEric2077/simplebank/util"
+	_ "github.com/lib/pq"
 )
 
 var testQueries *Queries

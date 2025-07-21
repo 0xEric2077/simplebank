@@ -1,4 +1,4 @@
-module github.com/EricUCL/simplebank
+module github.com/0xEric2077/simplebank
 
 go 1.22.2
 

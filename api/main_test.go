@@ -1,13 +1,14 @@
 package api
 
 import (
-	db "github.com/EricUCL/simplebank/db/sqlc"
-	"github.com/EricUCL/simplebank/util"
-	"github.com/gin-gonic/gin"
-	"github.com/stretchr/testify/require"
 	"os"
 	"testing"
 	"time"
+
+	db "github.com/0xEric2077/simplebank/db/sqlc"
+	"github.com/0xEric2077/simplebank/util"
+	"github.com/gin-gonic/gin"
+	"github.com/stretchr/testify/require"
 )
 
 func newTestServer(t *testing.T, store db.Store) *Server {

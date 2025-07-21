@@ -5,18 +5,19 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	mockdb "github.com/EricUCL/simplebank/db/mock"
-	db "github.com/EricUCL/simplebank/db/sqlc"
-	"github.com/EricUCL/simplebank/util"
-	"github.com/gin-gonic/gin"
-	"github.com/lib/pq"
-	"github.com/stretchr/testify/require"
-	"go.uber.org/mock/gomock"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
 	"reflect"
 	"testing"
+
+	mockdb "github.com/0xEric2077/simplebank/db/mock"
+	db "github.com/0xEric2077/simplebank/db/sqlc"
+	"github.com/0xEric2077/simplebank/util"
+	"github.com/gin-gonic/gin"
+	"github.com/lib/pq"
+	"github.com/stretchr/testify/require"
+	"go.uber.org/mock/gomock"
 )
 
 type eqCreateUserParamsMatcher struct {

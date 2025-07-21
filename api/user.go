@@ -3,12 +3,13 @@ package api
 import (
 	"database/sql"
 	"errors"
-	db "github.com/EricUCL/simplebank/db/sqlc"
-	"github.com/EricUCL/simplebank/util"
-	"github.com/gin-gonic/gin"
-	"github.com/lib/pq"
 	"net/http"
 	"time"
+
+	db "github.com/0xEric2077/simplebank/db/sqlc"
+	"github.com/0xEric2077/simplebank/util"
+	"github.com/gin-gonic/gin"
+	"github.com/lib/pq"
 )
 
 type createUserRequest struct {

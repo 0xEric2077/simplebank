@@ -5,17 +5,18 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	mockdb "github.com/EricUCL/simplebank/db/mock"
-	db "github.com/EricUCL/simplebank/db/sqlc"
-	"github.com/EricUCL/simplebank/token"
-	"github.com/EricUCL/simplebank/util"
-	"github.com/stretchr/testify/require"
-	"go.uber.org/mock/gomock"
 	"io"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 	"time"
+
+	mockdb "github.com/0xEric2077/simplebank/db/mock"
+	db "github.com/0xEric2077/simplebank/db/sqlc"
+	"github.com/0xEric2077/simplebank/token"
+	"github.com/0xEric2077/simplebank/util"
+	"github.com/stretchr/testify/require"
+	"go.uber.org/mock/gomock"
 )
 
 func TestGetAccountAPI(t *testing.T) {
