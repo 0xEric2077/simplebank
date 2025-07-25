@@ -29,7 +29,6 @@
 Thumbs.db
 
 # Env files
-app.env
 .env
 
 # Build output
