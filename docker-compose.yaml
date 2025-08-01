@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   postgres:
-    image: postgres:16.2-alpine3.19
+    image: postgres:17.5-alpine3.22
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=123456
@@ -16,7 +16,8 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - 8080:8080
+      - 9090:9090
     environment:
       - DB_SOURCE=postgresql://postgres:123456@postgres:5432/simple_bank?sslmode=disable
     depends_on:
