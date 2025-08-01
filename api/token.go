@@ -3,9 +3,10 @@ package api
 import (
 	"database/sql"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"time"
+
+	"github.com/gin-gonic/gin"
 )
 
 type renewAccessTokenRequest struct {
@@ -47,7 +48,7 @@ func (server *Server) renewAccessToken(ctx *gin.Context) {
 	}
 
 	if session.Username != refreshPayload.Username {
-		err := fmt.Errorf("session [%s] does not belong to user [%s]")
+		err := fmt.Errorf("session [%s] does not belong to user [%s]", session.ID, refreshPayload.Username)
 		ctx.JSON(http.StatusUnauthorized, errorResponse(err))
 		return
 	}
