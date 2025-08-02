@@ -10,7 +10,11 @@ WORKDIR /app
 COPY --from=builder /app/main .
 COPY app.env .
 COPY start.sh .
+COPY wait-for.sh .
 COPY db/migration ./db/migration
+
+# Make shell scripts executable
+RUN chmod +x start.sh wait-for.sh
 
 EXPOSE 8080
 CMD [ "/app/main" ]

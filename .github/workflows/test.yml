@@ -16,7 +16,7 @@ jobs:
       postgres:
         image: postgres:17.5-alpine3.22
         env:
-          POSTGRES_USER: postgres
+          POSTGRES_USER: root
           POSTGRES_PASSWORD: 123456
           POSTGRES_DB: simple_bank
         # Set health checks to wait until postgres has started
