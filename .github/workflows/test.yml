@@ -14,7 +14,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:16.2-alpine3.19
+        image: postgres:17.5-alpine3.22
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: 123456
@@ -35,7 +35,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: ^1.22
+          go-version: ^1.24.5
 
       - name: Install golang-migrate
         run: |
